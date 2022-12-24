@@ -1,0 +1,32 @@
+{
+  "name": "learningmanagementsystem",
+  "version": "1.0.0",
+  "description": "Learning Management System",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/irfanalmsyah/LMS"
+  },
+  "keywords": [
+    "express",
+    "react",
+    "lms"
+  ],
+  "author": "irfanalmsyah",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.8.0",
+    "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
