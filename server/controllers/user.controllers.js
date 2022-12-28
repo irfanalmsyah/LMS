@@ -14,24 +14,21 @@ const createUser = async (req, res) => {
   	try {
 		if (
             !req.body.name || 
-            !req.body.email || 
-            !req.body.password ||
             !req.body.username ||
-            !req.body.nim
+            !req.body.password ||
+            !req.body.role
         ) { 
-			throw new Error('Name, email, password, username, and nim are required');
+			throw new Error('Name, username, password, and role are required');
 		}
-		const { name, email, password, role, username, nim } = req.body;
-		if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-			throw new Error('Invalid email');
-		}
-		const user = await User.findOne({ where: { email } });
+		const { name, username, password, role, regnum } = req.body;
+		const user = await User.findOne({ where: { username } });
 		if (user) {
-			throw new Error('Email already exists');
+			throw new Error('Username already exists');
 		}
+        const email = username + '@apps.ipb.ac.id';
 		const salt = await bcrypt.genSalt(10);
 		const hashedPassword = await bcrypt.hash(password, salt);
-		const newUser = await User.create({ name, email, password: hashedPassword, role, username, nim });
+		const newUser = await User.create({ name, username, email, password: hashedPassword, role, regnum });
 		res.json(newUser);
 	} catch (error) {
 		res.status(400).json({ message: error.message });
@@ -41,7 +38,7 @@ const createUser = async (req, res) => {
 const getUser = async (req, res) => {
     try {
 		const { id } = req.params;
-        const user = await User.findByPk(id, { attributes: { exclude: ['password'] } });
+        const user = await User.findByPk(id);
 		if (!user) {
 			throw new Error('User not found');
 		}
@@ -60,7 +57,7 @@ const deleteUser = async (req, res) => {
             throw new Error('User not found');
         }
         await user.destroy();
-        res.send('User deleted');
+        res.json({ message: 'User deleted' });
     } catch (error) {
         res.status(401).json({ message: error.message });
     }
@@ -73,8 +70,10 @@ const updateUser = async (req, res) => {
         if (!user) {
             throw new Error('User not found');
         }
-        const { name, email, password } = req.body;
-        const updatedUser = await user.update({ name, email, password });
+        const { name, email, password, role, regnum } = req.body;
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(password, salt);
+        const updatedUser = await user.update({ name, email, password: hashedPassword, role, regnum });
         res.json(updatedUser);
     } catch (error) {
         res.status(401).json({ message: error.message });
@@ -91,8 +90,10 @@ const getMe = async (req, res) => {
 
 const updateMe = async (req, res) => {
     try {
-        const { name, email, password } = req.body;
-        const updatedUser = await req.user.update({ name, email, password });
+        const { password } = req.body;
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(password, salt);
+        const updatedUser = await req.user.update({ password: hashedPassword });
         res.json(updatedUser);
     } catch (error) {
         res.status(401).json({ message: error.message });

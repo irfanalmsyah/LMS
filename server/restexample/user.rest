@@ -1,0 +1,56 @@
+GET http://localhost:3000/users
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY3MjIxOTI3MCwiZXhwIjoxNjcyMzA1NjcwfQ.x2EPRQWzi-4cS50gFjkEOWqtb2AptkywLPofSnztkIE
+
+###
+POST http://localhost:3000/users
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY3MjIxOTI3MCwiZXhwIjoxNjcyMzA1NjcwfQ.x2EPRQWzi-4cS50gFjkEOWqtb2AptkywLPofSnztkIE
+
+{
+    "name": "usnu",
+    "username": "usnu",
+    "password": "thisisobviouslynotmypassword",
+    "role": "lecturer"
+}
+
+###
+GET http://localhost:3000/users/4
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY3MjIxOTI3MCwiZXhwIjoxNjcyMzA1NjcwfQ.x2EPRQWzi-4cS50gFjkEOWqtb2AptkywLPofSnztkIE
+
+###
+PUT http://localhost:3000/users/2
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY3MjIxOTI3MCwiZXhwIjoxNjcyMzA1NjcwfQ.x2EPRQWzi-4cS50gFjkEOWqtb2AptkywLPofSnztkIE
+
+{
+    "name": "ujang",
+    "username": "ucup",
+    "password": "thisisobviouslynotmypassword",
+    "role": "student",
+    "regnum": "G69"
+}
+
+###
+DELETE http://localhost:3000/users/4
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY3MjIxOTkxNiwiZXhwIjoxNjcyMzA2MzE2fQ.sKqgrN8AFeWuGzW4m3IYe9JlXAvL3taOKJIwRwW6ab0
+
+###
+GET http://localhost:3000/users/me
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTY3MjIyMTg5NywiZXhwIjoxNjcyMzA4Mjk3fQ.An0spL2yC-LElFTOkDR8LtuzEkfaZvBAxbQcx9A0ZbQ
+
+###
+PUT http://localhost:3000/users/me
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY3MjIxOTkxNiwiZXhwIjoxNjcyMzA2MzE2fQ.sKqgrN8AFeWuGzW4m3IYe9JlXAvL3taOKJIwRwW6ab0
+
+{
+    "name": "ujang",
+    "username": "ucup",
+    "password": "thisisobviouslynotmypassword",
+    "role": "student",
+    "regnum": "G69"
+}

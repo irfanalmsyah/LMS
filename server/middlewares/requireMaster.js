@@ -3,12 +3,16 @@ dotenv.config();
 
 const requireMaster = (req, res, next) => {
     try {
-        const token = req.body.token;
-        if (!token) {
+        const authheader = req.headers.authorization;
+        if (!authheader) {
             throw new Error('Token is required');
         }
+        if (authheader.split(' ')[0] !== 'Bearer') {
+            throw new Error('Invalid token format');
+        }
+        const token = authheader.split(' ')[1];
         if (token !== process.env.MASTER_TOKEN) {
-            throw new Error('Invalid master token');
+            throw new Error('Invalid token');
         }
         next();
     } catch (error) {

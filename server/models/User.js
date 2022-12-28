@@ -1,5 +1,8 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../configs/database');
+const bcrypt = require('bcryptjs');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const User = sequelize.define('user', {
     name: {
@@ -43,21 +46,15 @@ const User = sequelize.define('user', {
         },
       },
     },
-    nim: {
+    regnum: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
         unique: true,
-        validate: {
-            notEmpty: {
-                msg: 'Please provide a value for "nim"',
-            },
-        },
     },
     role: {
-      type: Sequelize.ENUM('user', 'admin'),
+      type: Sequelize.ENUM('admin', 'lecturer', 'student'),
       allowNull: false,
-      defaultValue: 'user',
     },
-  });
+});
 
 module.exports = User;

@@ -13,15 +13,14 @@ const {
 const {
     requireAuth,
     requireAdmin,
-    requireMaster,
 } = require('../middlewares');
 
 router.get('/', requireAdmin, getAllUsers);
-router.post('/', requireMaster, createUser);
+router.post('/', requireAdmin, createUser);
 
 router.get('/:id(\\d+)', requireAdmin, getUser);
 router.put('/:id(\\d+)', requireAdmin, updateUser);
-router.delete('/:id(\\d+)', requireMaster, deleteUser);
+router.delete('/:id(\\d+)', requireAdmin, deleteUser);
 
 router.get('/me', requireAuth, getMe);
 router.put('/me', requireAuth, updateMe);

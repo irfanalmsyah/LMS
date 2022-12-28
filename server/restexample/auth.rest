@@ -1,0 +1,40 @@
+GET http://localhost:3000/auth
+content-type: application/json
+Authorization: Bearer setYourSuperSecretMasterTokenHere
+
+{
+    "username": "admin",
+    "password": "admin"
+}
+
+###
+GET http://localhost:3000/auth
+Content-Type: application/json
+Authorization: Bearer setYourSuperSecretMasterTokenHere
+
+{
+    "username": "ucup",
+    "password": "thisisobviouslynotmypassword"
+}
+
+###
+
+GET http://localhost:3000/auth
+Content-Type: application/json
+Authorization: Bearer setYourSuperSecretMasterTokenHere
+
+{
+    "username": "udin",
+    "password": "thisisobviouslynotmypassword"
+}
+
+###
+GET http://localhost:3000/auth
+Content-Type: application/json
+Authorization: Bearer setYourSuperSecretMasterTokenHere
+
+{
+    "username": "usnu",
+    "password": "thisisobviouslynotmypassword"
+}
+

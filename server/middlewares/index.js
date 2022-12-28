@@ -5,5 +5,5 @@ const requireMaster = require('./requireMaster');
 module.exports = {
     requireAdmin,
     requireAuth,
-    requireMaster,
+    requireMaster
 };  
