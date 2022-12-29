@@ -1,4 +1,4 @@
-GET http://localhost:3000/auth
+POST http://localhost:3000/auth
 content-type: application/json
 Authorization: Bearer setYourSuperSecretMasterTokenHere
 
@@ -8,7 +8,7 @@ Authorization: Bearer setYourSuperSecretMasterTokenHere
 }
 
 ###
-GET http://localhost:3000/auth
+POST http://localhost:3000/auth
 Content-Type: application/json
 Authorization: Bearer setYourSuperSecretMasterTokenHere
 
@@ -19,7 +19,7 @@ Authorization: Bearer setYourSuperSecretMasterTokenHere
 
 ###
 
-GET http://localhost:3000/auth
+POST http://localhost:3000/auth
 Content-Type: application/json
 Authorization: Bearer setYourSuperSecretMasterTokenHere
 
@@ -29,7 +29,7 @@ Authorization: Bearer setYourSuperSecretMasterTokenHere
 }
 
 ###
-GET http://localhost:3000/auth
+POST http://localhost:3000/auth
 Content-Type: application/json
 Authorization: Bearer setYourSuperSecretMasterTokenHere
 
