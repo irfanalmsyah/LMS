@@ -4,8 +4,8 @@
   "description": "Learning Management System",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "cross-env NODE_ENV=production node app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -26,9 +26,11 @@
     "jsonwebtoken": "^9.0.0",
     "morgan": "^1.10.0",
     "pg": "^8.8.0",
-    "sequelize": "^6.28.0"
+    "sequelize": "^6.28.0",
+    "sqlite3": "^5.1.4"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.20"
   }
 }
