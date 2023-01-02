@@ -1,3 +1,7 @@
+#code editor and IDE
+.idea/
+.vscode/
+
 #sqlite
 *.sqlite
 
