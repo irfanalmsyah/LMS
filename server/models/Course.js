@@ -18,8 +18,7 @@ const Course = sequelize.define('course', {
         validate: {
             notEmpty: {
                 msg: 'Please provide a value for "code"',
-            },
-            
+            },       
         },
     },
 });
