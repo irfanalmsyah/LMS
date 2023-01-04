@@ -1,0 +1,107 @@
+.navbar {
+  position: absolute;
+  width: 1920px;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+
+  /* White */
+
+  background: #ffffff;
+}
+
+.gambarlogo {
+  position: absolute;
+  width: 163px;
+  height: 43px;
+  left: 82px;
+  top: 18px;
+
+  background: url(../logoipbbiru.png);
+}
+
+.searchbarbox {
+    position: absolute;
+    width: 466px;
+    height: 46px;
+    left: 1134px;
+    top: 17px;
+
+  background: rgba(196, 196, 196, 0.5);
+  opacity: 0.3;
+  border-radius: 100px;
+
+font-family: 'Poppins';
+font-style: italic;
+font-weight: 300;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+
+.searchicon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 1558px;
+    top: 25px;
+
+    cursor: pointer;
+}
+
+.profilephoto {
+  box-sizing: border-box;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: 1632px;
+  top: 16px;
+
+  /* Primary */
+
+  border: 1px solid #4640de;
+}
+
+.profilename {
+  position: absolute;
+  width: 160px;
+  height: 27px;
+  left: 1696px;
+  top: 16px;
+
+  /* Poppins H4 Medium */
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+  /* Ungu */
+
+  color: #0c145a;
+}
+
+.profilenim {
+  position: absolute;
+  width: 86px;
+  height: 21px;
+  left: 1696px;
+  top: 43px;
+
+  /* Poppins H6 Regular */
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+
+  color: rgba(12, 20, 90, 0.5);
+}

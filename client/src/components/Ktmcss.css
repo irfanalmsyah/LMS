@@ -1,0 +1,81 @@
+
+.ktm-title {
+    /* KTM */
+
+
+position: absolute;
+width: 52px;
+height: 36px;
+left: 366px;
+top: 126px;
+
+/* Poppins H2 Semi Bold */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height */
+
+
+/* Ungu */
+
+color: #0C145A;
+}
+
+.ktm-box{
+    /* Rectangle 2772 */
+
+
+position: absolute;
+width: 1490px;
+height: 871px;
+left: 366px;
+top: 209px;
+
+/* Base 1 */
+
+background: #FBFCFD;
+border-radius: 24px 24px 0px 0px;
+}
+
+.ktm-card{
+    /* KTM Denada Soetanto */
+position: absolute;
+width: 689.07px;
+height: 435px;
+left: 416px;
+top: 260px;
+
+background: url(../ktmex.png);
+background-position: -115px -60px;
+}
+
+.ktm-download-button {
+    position: absolute;
+width: 270px;
+height: 54px;
+left: 416px;
+top: 741px;
+
+/* Primary */
+
+background: #4640DE;
+box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);
+border-radius: 16px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+}
+
+.ktm-download-button:hover {
+    background-color: #1a2694;
+}

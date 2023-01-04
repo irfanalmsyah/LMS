@@ -1,0 +1,213 @@
+
+body{
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: #F3F4FF;
+}
+
+.logoipb{
+    position: absolute;
+    width: 312px;
+    height: 76px;
+    left: 64px;
+    top: 67px;
+
+background: url(../LogoIPB.png);
+
+}
+.imgsamping {
+    position: absolute;
+    width: 950px;
+height: 1083px;
+left: 0px;
+top: -3px;
+
+background: url(../ipb.png);
+}
+
+.Loginlms {
+    position: absolute;
+    width: 200px;
+    height: 48px;
+    left: 1146px;
+    top: 348px;
+    
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 33.75px;
+line-height: 51px;
+/* identical to box height */
+
+
+color: #121929;
+}
+
+.Logindesc {
+    position: absolute;
+    width: 402px;
+    height: 27px;
+    left: 1146px;
+    top: 404.38px;
+    
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+
+
+color: #63676F;
+
+}
+
+.emailaddbox {
+    position: absolute;
+    width: 529px;
+    height: 61.88px;
+    left: 1146px;
+    top: 465.12px;
+
+background: #FFFFFF;
+border-radius: 18px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+
+}
+
+.emailadd1 {
+    position: absolute;
+    width: 161.4px;
+    height: 27px;
+    left: 1170px;
+    top: 482px;
+
+
+/* identical to box height */
+
+
+color: #121929;
+}
+
+.passaddbox {
+    position: absolute;
+    width: 529px;
+    height: 62px;
+    left: 1146px;
+    top: 545px;
+
+
+color: #121929;
+
+background: #FFFFFF;
+border-radius: 18px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+}
+
+.passadd1 {
+    position: absolute;
+    width: 87px;
+    height: 27px;
+    left: 1170px;
+    top: 562px;
+
+
+/* identical to box height */
+
+
+color: #121929;
+}
+
+
+.passeye {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    left: 1620px;
+    top: 562px;
+    
+cursor: pointer;
+
+}
+
+.passforgot {
+    position: absolute;
+    width: 170px;
+    height: 27px;
+    left: 1526px;
+    top: 618px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+
+text-decoration-line: underline;
+
+color: #63676F;
+}
+
+.loginbtnbox {
+    position: absolute;
+    width: 528.88px;
+    height: 55px;
+    left: 1146.12px;
+    top: 678.88px;
+
+background: #4640DE;
+border-radius: 16px;
+}
+
+.loginbtn1 {
+    position: absolute;
+    width: 275.27px;
+    height: 27px;
+    left: 1273.56px;
+    top: 692.88px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+
+text-align: center;
+
+color: #FFFFFF;
+}
+
+.test {
+    position: absolute;
+    width: 528.88px;
+    height: 55px;
+    left: 1146.12px;
+    top: 678.88px;
+
+background: #4640DE;
+border-radius: 16px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+
+color: #FFFFFF;
+}
