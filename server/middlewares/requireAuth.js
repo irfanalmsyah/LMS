@@ -5,24 +5,25 @@ const requireAuth = async (req, res, next) => {
     try {
         const authheader = req.header('Authorization');
         if (!authheader) {
-            throw new Error('Token is required');
+            res.status(401).json({ message: 'No token provided' });
         }
         if (authheader.split(' ')[0] !== 'Bearer') {
-            throw new Error('Invalid token format');
+            res.status(401).json({ message: 'Invalid token' });
         }
         const token = authheader.split(' ')[1];
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        if (decoded.exp < Date.now() / 1000) {
-            throw new Error('Token expired');
-        }
         const user = await User.findByPk(decoded.userId);
         if (!user) {
-            throw new Error('User not found');
+            res.status(401).json({ message: 'User not found' });
         }
         req.user = user;
         next();
     } catch (error) {
-        res.status(401).json({ message: error.message });
+        if (error instanceof jwt.TokenExpiredError || error instanceof jwt.JsonWebTokenError) {
+            res.status(401).json({ message: error.message });
+        } else {
+            res.status(400).json({ message: error.message });
+        }
     }
 };
 
