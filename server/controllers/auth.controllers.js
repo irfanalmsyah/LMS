@@ -18,8 +18,7 @@ const login = async (req, res) => {
             throw new Error('Username or password is incorrect');
         }
         const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '1d' });
-        res.header('Authorization', 'Bearer ' + token);
-        res.json({ user });
+        res.json({ token });
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
