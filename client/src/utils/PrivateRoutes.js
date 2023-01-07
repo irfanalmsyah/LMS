@@ -3,12 +3,12 @@ import {useCookies } from 'react-cookie';
 import Loginfetch from '../components/Loginfetch'
 
 const PrivateRoutes = () => {
-    const [cookies, setCookie] = useCookies(['jwt_authorization']);
+    const [cookies, setCookie] = useCookies(['token']);
 
     console.log("posisi di privateroutes");
 
     return(
-        cookies.jwt_authorization ? <Outlet/> : <Navigate to="/"/>
+        cookies.token ? <Outlet/> : <Navigate to="/"/>
     )
 }
 
