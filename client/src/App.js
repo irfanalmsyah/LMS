@@ -13,6 +13,7 @@ import Apitest from "./components/Apitest";
 import PrivateRoutes from "./utils/PrivateRoutes";
 import Cookiejwt from "./utils/Cookiejwt";
 import Cookieset from "./utils/Cookieset";
+import Navbarcomponents from "./components/Navbarcomponents";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route exact path="/" element={<Logincomponents />} />
+          <Route path ="/navbar" element={<Navbarcomponents />} />
 
 
 
