@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import { redirect } from "react-router-dom";
+import { redirect, Navigate } from "react-router-dom";
 import "./Logincss.css";
 import Loginfetch from "./Loginfetch";
 
@@ -14,7 +14,7 @@ import { render } from "@testing-library/react";
 const Logincomponents = () => {
 
   //yang dibawah ini untuk masalah token dan auth login
-  const {email, password, responseData, handleSubmit, setEmail, setPassword, setResponseData} = Loginfetch();
+  const {email, password, data, handleSubmit, setEmail, setPassword, setData, error, setError} = Loginfetch();
 
 
   //yang dibawah ini const untuk setting hide/unhide password
@@ -27,12 +27,19 @@ const Logincomponents = () => {
     } else {
       setPass("password");
       setIcon(eyeOff);
+
     }
   };
 
     return (
       <div>
-        <div class="Loginpage">
+        {data && <Navigate to="/navbar" />}
+        <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Email Address" class="emailaddbox" value={email} onChange={event => setEmail(event.target.value)}></input>
+        <input type={pass} placeholder="Password" class="passaddbox" value={password} onChange={event => setPassword(event.target.value)}></input>
+        <button type="submit" placeholder="test" class="test" value="Sign In & Start Studying"></button>
+        </form>
+        {/* <div class="Loginpage">
           <div class="imgsamping"></div>
           <div class="logoipb"></div>
 
@@ -40,8 +47,8 @@ const Logincomponents = () => {
 
           <div>
             {
-              responseData ? (
-                <span class="Logindesc">Anda telah login, {responseData.user.name}</span>
+              data ? (
+                <span class="Logindesc">Anda telah login, {data.user.name}</span>
               ) :
               (
                 <span class="Logindesc">Login untuk memulai aktivitas pembelajaran</span>
@@ -53,10 +60,10 @@ const Logincomponents = () => {
           <form onSubmit={handleSubmit}>
           <div class="emailadd">
           <input type="text" placeholder="Email Address" class="emailaddbox" value={email} onChange={event => setEmail(event.target.value)}></input>
-          </div>
+          </div> */}
           {/* <input type="submit" class="emailaddbox"></input> */}
 
-          <div class="passadd">
+          {/* <div class="passadd">
           <input type={pass} placeholder="Password" class="passaddbox" value={password} onChange={event => setPassword(event.target.value)}>
           </input>
 
@@ -69,7 +76,9 @@ const Logincomponents = () => {
           
           <input type="submit" placeholder="test" class="test" value="Sign In & Start Studying"></input>
 
-          </form>
+          </form> */}
+          {error && <div class="Errordesc">{error}</div>}
+
 
           
 
@@ -80,7 +89,7 @@ const Logincomponents = () => {
           } else {
             <span class="Logindesc">Login untuk memulai aktivitas pembelajaran tidak ada user</span>
           } */}
-      </div>
+      {/* </div> */}
       </div>
     );
 
