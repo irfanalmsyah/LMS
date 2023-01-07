@@ -211,3 +211,23 @@ line-height: 27px;
 
 color: #FFFFFF;
 }
+
+.Errordesc {
+    position: absolute;
+    width: 402px;
+    height: 27px;
+    left: 1146px;
+    top: 800px;
+    
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+
+
+color: #f02121;
+
+}
