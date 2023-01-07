@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useEffect } from "react";
 import "./Usersettingcss.css";
 import { Icon } from "react-icons-kit";
 import {edit3} from 'react-icons-kit/feather/edit3'
@@ -6,8 +7,37 @@ import {Link} from "react-router-dom";
 import {switchIcon} from 'react-icons-kit/icomoon/switchIcon'
 import Navbarcomponents from "./Navbarcomponents";
 import Usersettingcomponents from './Usersettingcomponents';
+import {useCookies } from 'react-cookie';
+import axios from "axios";
 
 const Userdetailcomponents = () => {
+
+    const [cookies, setCookie, removeCookie] = useCookies();
+    const [data, setData] = useState(null);
+    const [error, setError] = useState(null);
+  
+    useEffect(() => {
+      axios.get("http://localhost:3000/users/me", {
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${cookies.token}`
+        }
+      })
+      .then((response) => {
+        setData(response.data)
+        console.log(response.data)
+      })
+      .catch((error) => {
+        setError(error)
+      })
+    }, [cookies.token])
+
+
+    const Logout = () => {
+        removeCookie("token");
+        window.location.reload();
+    }
+
   return (
     <div>
         <div class="userdetail-content">
@@ -15,8 +45,9 @@ const Userdetailcomponents = () => {
         <div class="userdetail-box"></div>
         <div class="userdetail-user">
             <div class="userdetail-userprofile"></div>
-            <div class="userdetail-username">Denada Soetanto</div>
-            <button class="userdetail-logout">
+            {data && <div class="userdetail-username">{data.name}</div>}
+            {/* <div class="userdetail-username">Denada Soetanto</div> */}
+            <button class="userdetail-logout" onClick={Logout}>
                 <div class="userdetail-logoutbox"></div>
                 <div class="userdetail-logouttext">LOG OUT</div>
                 <div class="userdetail-logouticon">
@@ -26,16 +57,19 @@ const Userdetailcomponents = () => {
         </div>
         <div class="userdetail-name">Name</div>
         <div class="userdetail-realnamebox"></div>
-        <div class="userdetail-realname">Denada Soetanto</div>
+        {data && <div class="userdetail-realname">{data.name}</div>}
+        {/* <div class="userdetail-realname">Denada Soetanto</div> */}
         <div class="userdetail-nim">NIM</div>
         <div class="userdetail-realnimbox"></div>
-        <div class="userdetail-realnim">G60121198</div>
+        {data && <div class="userdetail-realnimbox">{data.regnum}</div>}
+        {/* <div class="userdetail-realnim">G60121198</div> */}
         <div class="userdetail-email">Email</div>
         <div class="userdetail-realemailbox"></div>
         <div class="userdetail-realemailicon">
             <Icon icon={edit3} size={24} />
         </div>
-        <div class="userdetail-realemail">denadasoetanto@apps.aipibi.ac.id</div>
+        {data && <div class="userdetail-realemail">{data.email}</div>}
+        {/* <div class="userdetail-realemail">denadasoetanto@apps.aipibi.ac.id</div> */}
         <div class="userdetail-phone">Phone</div>
         <div class="userdetail-realphonebox"></div>
         <div class="userdetail-realphoneicon">
