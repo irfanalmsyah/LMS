@@ -6,6 +6,7 @@ const CourseClass = require('../models/CourseClass')
 const CourseChild = require('../models/CourseChild')
 const Enrollment = require('../models/Enrollment')
 const Teaching = require('../models/Teaching')
+const gravatar = require('../middlewares/gravatar')
 
 CourseClass.hasMany(CourseChild);
 CourseChild.belongsTo(CourseClass);
@@ -30,6 +31,9 @@ CourseClass.belongsToMany(User, { through: Teaching });
             username : 'admin',
             password : bcrypt.hashSync('admin', salt),
             email : 'admin@admin.com',
+            regnum: 'admin',
+            birthdate: new Date(),
+            avatar: gravatar('admin@admin.com'),
             role : 'admin'
         },
         {
@@ -38,6 +42,9 @@ CourseClass.belongsToMany(User, { through: Teaching });
             username: 'ucup',
             password: bcrypt.hashSync('ucup', salt),
             email: 'ucup@gmail.com',
+            regnum: 'G6401211998',
+            birthdate: new Date(),
+            avatar: gravatar('ucup@gmail.com'),
             role: 'student'
         },
         {
@@ -46,6 +53,9 @@ CourseClass.belongsToMany(User, { through: Teaching });
             username: 'otong',
             password: bcrypt.hashSync('otong', salt),
             email: 'otong@gmail.com',
+            regnum: 'G6401211999',
+            birthdate: new Date(),
+            avatar: gravatar('otong@gmail.com'),
             role: 'student'
         },
         {
@@ -54,6 +64,9 @@ CourseClass.belongsToMany(User, { through: Teaching });
             username: 'sule',
             password: bcrypt.hashSync('sule', salt),
             email: 'sule@gmail.com',
+            regnum: '1762761',
+            birthdate: new Date(),
+            avatar: gravatar('sule@gmail.com'),
             role: 'lecturer'
         },
         {
@@ -62,6 +75,9 @@ CourseClass.belongsToMany(User, { through: Teaching });
             username: 'siti',
             password: bcrypt.hashSync('siti', salt),
             email: 'siti@gmail.com',
+            regnum: '1762762',
+            birthdate: new Date(),
+            avatar: gravatar('siti@gmail.com'),
             role: 'lecturer',
         },
         {
@@ -70,6 +86,9 @@ CourseClass.belongsToMany(User, { through: Teaching });
             username: 'susi',
             password: bcrypt.hashSync('susi', salt),
             email: 'susi@gmail.com',
+            regnum: '1762763',
+            birthdate: new Date(),
+            avatar: gravatar('susi@gmail.com'),
             role: 'lecturer'
         }
     ]) 
