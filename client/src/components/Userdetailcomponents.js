@@ -65,9 +65,7 @@ const Userdetailcomponents = () => {
         {/* <div class="userdetail-realnim">G60121198</div> */}
         <div class="userdetail-email">Email</div>
         <div class="userdetail-realemailbox"></div>
-        <div class="userdetail-realemailicon">
-            <Icon icon={edit3} size={24} />
-        </div>
+      
         {data && <div class="userdetail-realemail">{data.email}</div>}
         {/* <div class="userdetail-realemail">denadasoetanto@apps.aipibi.ac.id</div> */}
         <div class="userdetail-phone">Phone</div>
