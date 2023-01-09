@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { redirect, Navigate } from "react-router-dom";
+import { redirect, Navigate, NavLink } from "react-router-dom";
 import "./Navbarcss.css";
 import { Icon } from 'react-icons-kit'
 import {search} from 'react-icons-kit/feather/search'
@@ -49,7 +49,12 @@ function Navbarcomponents() {
     <div>
       {error && <Navigate to="/" />}
       <div class="navbar"></div>
-      <div class="gambarlogo"></div>
+      
+        <NavLink to={"/dashboard"}>
+        <div class="gambarlogo">
+        </div>
+        </NavLink>
+      
       <div class="searchbar">
         <input type="text" placeholder="Search" class="searchbarbox"></input>
       </div>
