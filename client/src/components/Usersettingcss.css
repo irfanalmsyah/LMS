@@ -174,7 +174,11 @@ height: 100px;
 left: 416px;
 top: 260px;
 
-background: #FEC4D3;
+}
+
+.userdetail-userpicture {
+    width: 100px;
+height: 100px;
 }
 
 .userdetail-username{

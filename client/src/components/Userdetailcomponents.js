@@ -44,7 +44,10 @@ const Userdetailcomponents = () => {
         <div class="userdetail-title">User Detail</div>
         <div class="userdetail-box"></div>
         <div class="userdetail-user">
-            <div class="userdetail-userprofile"></div>
+            <div class="userdetail-userprofile">
+            {data && <img src={data.avatar} alt='profile-picture' className='userdetail-userpicture'></img> }
+              {/* <img src='https://gravatar.com/avatar/4187cd86b11111314cba4bbcec354182?d=retro' alt='profile-picture'></img> */}
+            </div>
             {data && <div class="userdetail-username">{data.name}</div>}
             {/* <div class="userdetail-username">Denada Soetanto</div> */}
             <button class="userdetail-logout" onClick={Logout}>
@@ -61,7 +64,7 @@ const Userdetailcomponents = () => {
         {/* <div class="userdetail-realname">Denada Soetanto</div> */}
         <div class="userdetail-nim">NIM</div>
         <div class="userdetail-realnimbox"></div>
-        {data && <div class="userdetail-realnimbox">{data.regnum}</div>}
+        {data && <div class="userdetail-realnim">{data.regnum}</div>}
         {/* <div class="userdetail-realnim">G60121198</div> */}
         <div class="userdetail-email">Email</div>
         <div class="userdetail-realemailbox"></div>
@@ -73,10 +76,12 @@ const Userdetailcomponents = () => {
         <div class="userdetail-realphoneicon">
             <Icon icon={edit3} size={24} />
         </div>
-        <div class="userdetail-realphone">+6281287654332</div>
+        {data && <div class="userdetail-realphone">{data.phone}</div>}
+        {/* <div class="userdetail-realphone">+6281287654332</div> */}
         <div class="userdetail-dob">Date of Birth</div>
         <div class="userdetail-realdobbox"></div>
-        <div class="userdetail-realdob">12 - 04 - 2002</div>
+        {data && <div class="userdetail-realdob">{data.birthdate}</div>}
+        {/* <div class="userdetail-realdob">12 - 04 - 2002</div> */}
     </div>
 
     <Usersettingcomponents />

@@ -61,7 +61,9 @@ function Navbarcomponents() {
       <span class="searchicon">
         <Icon icon={search} size={24} />
       </span>
-      <div class="profilephoto"></div>
+      <div class="profilephoto">
+      {data && <img src={data.avatar} alt='profile-picture' className='profilephoto-picture'></img> }
+      </div>
       <div class="profile">
         {data && <div class="profilename">{data.name}</div>}
         {!(data) && <div class="profilename">Loading...</div>}
