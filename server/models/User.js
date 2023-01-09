@@ -48,13 +48,45 @@ const User = sequelize.define('user', {
     },
     regnum: {
         type: Sequelize.STRING,
+        allowNull: false,
+        unique: true,
+        validate: {
+            notEmpty: {
+                msg: 'Please provide a value for "regnum"',
+            },
+        }
+    },
+    phone: {
+        type: Sequelize.STRING,
         allowNull: true,
         unique: true,
+    },
+    birthdate: {
+        type: Sequelize.DATEONLY,
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: 'Please provide a value for "birthdate"',
+            },
+        },
+    },
+    avatar: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        validate: {
+            isUrl: {
+                msg: 'Please provide a valid url for "avatar"',
+            },
+            notEmpty: {
+                msg: 'Please provide a value for "avatar"',
+            },
+        },
     },
     role: {
       type: Sequelize.ENUM('admin', 'lecturer', 'student'),
       allowNull: false,
-    },
-});
+    }
+  },
+);
 
 module.exports = User;
