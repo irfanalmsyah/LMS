@@ -90,10 +90,10 @@ const getMe = async (req, res) => {
 
 const updateMe = async (req, res) => {
     try {
-        const { password } = req.body;
-        const salt = await bcrypt.genSalt(10);
-        const hashedPassword = await bcrypt.hash(password, salt);
-        const updatedUser = await req.user.update({ password: hashedPassword });
+        const { phone } = req.body;
+        const updatedUser = await req.user.update({ 
+            phone
+        });
         res.json(updatedUser);
     } catch (error) {
         res.status(401).json({ message: error.message });
