@@ -33,19 +33,20 @@ const Logincomponents = () => {
 
     return (
       <div>
-        {data && <Navigate to="/navbar" />}
-        <form onSubmit={handleSubmit}>
+        {data && <Navigate to="/usersetting" />}
+        {/* <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Email Address" class="emailaddbox" value={email} onChange={event => setEmail(event.target.value)}></input>
         <input type={pass} placeholder="Password" class="passaddbox" value={password} onChange={event => setPassword(event.target.value)}></input>
         <button type="submit" placeholder="test" class="test" value="Sign In & Start Studying"></button>
-        </form>
-        {/* <div class="Loginpage">
+        </form> */}
+        <div class="Loginpage">
           <div class="imgsamping"></div>
           <div class="logoipb"></div>
 
           <span class="Loginlms">Login LMS</span>
+          <span class="Logindesc">Login untuk memulai aktivitas pembelajaran</span>
 
-          <div>
+          {/* <div>
             {
               data ? (
                 <span class="Logindesc">Anda telah login, {data.user.name}</span>
@@ -54,16 +55,16 @@ const Logincomponents = () => {
                 <span class="Logindesc">Login untuk memulai aktivitas pembelajaran</span>
               )
             }
-          </div>
+          </div> */}
 
 
           <form onSubmit={handleSubmit}>
           <div class="emailadd">
           <input type="text" placeholder="Email Address" class="emailaddbox" value={email} onChange={event => setEmail(event.target.value)}></input>
-          </div> */}
+          </div>
           {/* <input type="submit" class="emailaddbox"></input> */}
 
-          {/* <div class="passadd">
+          <div class="passadd">
           <input type={pass} placeholder="Password" class="passaddbox" value={password} onChange={event => setPassword(event.target.value)}>
           </input>
 
@@ -76,8 +77,8 @@ const Logincomponents = () => {
           
           <input type="submit" placeholder="test" class="test" value="Sign In & Start Studying"></input>
 
-          </form> */}
-          {error && <div class="Errordesc">{error}</div>}
+          </form>
+         {/* {error && <div class="Errordesc">{error}</div>} */}
 
 
           
@@ -89,7 +90,7 @@ const Logincomponents = () => {
           } else {
             <span class="Logindesc">Login untuk memulai aktivitas pembelajaran tidak ada user</span>
           } */}
-      {/* </div> */}
+      </div>
       </div>
     );
 
