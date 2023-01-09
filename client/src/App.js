@@ -14,6 +14,7 @@ import PrivateRoutes from "./utils/PrivateRoutes";
 import Cookiejwt from "./utils/Cookiejwt";
 import Cookieset from "./utils/Cookieset";
 import Navbarcomponents from "./components/Navbarcomponents";
+import Dashboardcomponents from "./components/Dashboardcomponents";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
 
 
           <Route element={<PrivateRoutes />}>
+          <Route path="/dashboard" element={<Dashboardcomponents/>} />
           <Route path="/usersetting" element={<Usersettingcomponents />} />
             <Route path="/userdetail" element={<Userdetailcomponents />} />
             <Route path="/coursedetail" element={<Coursedetailcomponents />} />
