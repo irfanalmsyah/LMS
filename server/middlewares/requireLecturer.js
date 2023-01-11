@@ -26,7 +26,11 @@ const requireLecturer = async (req, res, next) => {
         next();
     } catch (error) {
         res.status(401).json({ message: error.message });
+        if (process.env.NODE_ENV !== 'production') {
+            console.error(error);
+        }
     }
+    
 }
 
 module.exports = requireLecturer;

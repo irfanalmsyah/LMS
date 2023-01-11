@@ -24,6 +24,9 @@ const requireAuth = async (req, res, next) => {
         } else {
             res.status(400).json({ message: error.message });
         }
+        if (process.env.NODE_ENV !== 'production') {
+            console.error(error);
+        }
     }
 };
 
