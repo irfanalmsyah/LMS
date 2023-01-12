@@ -25,12 +25,12 @@ router.post('/:courseId(\\d+)/', requireLecturer, createClass);
 router.put('/:courseId(\\d+)/', requireLecturer, updateCourse);
 router.delete('/:courseId(\\d+)/', requireLecturer, deleteCourse);
 
-router.post('/:courseId(\\d+)/class/:classId(\\d+)/', requireLecturer, createChild);
-router.put('/:courseId(\\d+)/class/:classId(\\d+)/', requireLecturer, updateClass);
-router.delete('/:courseId(\\d+)/class/:classId(\\d+)/', requireLecturer, deleteClass);
+router.post('/:courseId(\\d+)/classes/:classId(\\d+)/', requireLecturer, createChild);
+router.put('/:courseId(\\d+)/classes/:classId(\\d+)/', requireLecturer, updateClass);
+router.delete('/:courseId(\\d+)/classes/:classId(\\d+)/', requireLecturer, deleteClass);
 
-router.put('/:courseId(\\d+)/class/:classId(\\d+)/child/:childId(\\d+)/', requireLecturer, updateChild);
-router.delete('/:courseId(\\d+)/class/:classId(\\d+)/child/:childId(\\d+)/', requireLecturer, deleteChild);
+router.put('/:courseId(\\d+)/classes/:classId(\\d+)/children/:childId(\\d+)/', requireLecturer, updateChild);
+router.delete('/:courseId(\\d+)/classes/:classId(\\d+)/children/:childId(\\d+)/', requireLecturer, deleteChild);
 
 router.get('/me', requireAuth, getMyCourse);
 
