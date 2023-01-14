@@ -350,9 +350,21 @@ const deleteChild = async (req, res) => {
 
 const getMyCourse = async (req, res) => {
     try {
-        const myClasses = await Teaching.findAll({
-            where: { userId: req.user.id }
-        });
+        let myClasses;
+        switch (req.user.role) {
+            case 'student':
+                myClasses = await Enrollment.findAll({
+                    where: { userId: req.user.id }
+                });
+                break;
+            case 'lecturer':
+                myClasses = await Teaching.findAll({
+                    where: { userId: req.user.id }
+                });
+                break;
+            default:
+                throw new Error('Invalid user role');
+        }
         const myClassIds = myClasses.map(myClass => myClass.courseclassId);
         const myCourseClasses = await CourseClass.findAll({
             where: {

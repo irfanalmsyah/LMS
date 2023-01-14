@@ -25,7 +25,7 @@ const login = async (req, res) => {
             console.error(error);
         }
     }
-};  
+};
 
 module.exports = {
     login,
