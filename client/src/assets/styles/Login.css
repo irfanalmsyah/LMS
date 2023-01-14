@@ -14,17 +14,17 @@ body{
     left: 64px;
     top: 67px;
 
-background: url(../LogoIPB.png);
+background: url(../images/LogoIPB.png);
 
 }
 .imgsamping {
     position: absolute;
     width: 950px;
-height: 1083px;
-left: 0px;
-top: -3px;
+    height: 1083px;
+    left: 0px;
+    top: -3px;
 
-background: url(../ipb.png);
+background: url(../images/ipb.png);
 }
 
 .Loginlms {
