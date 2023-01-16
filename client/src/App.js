@@ -18,18 +18,18 @@ function App() {
         <Router>
         <div className="App">
             <Routes>
-            <Route path="/" element={<Login />} />
-            <Route element={<PrivateRoutes />}>
-                <Route path="/dashboard" element={<Dashboard/>} />
-                <Route exact path="/courses" element={<Courses />} />
-                <Route path="/courses/:id" element={<Course />} />
-                <Route element={<UserSettingSidebar />}>
-                    <Route path="/userdetail" element={<UserDetail />} />
-                    <Route path="/coursedetail" element={<MyCourse />} />
-                    <Route path="/ktm" element={<IdCard />} />
-                    <Route path="/language" element={<Language />} /> 
+                <Route path="/" element={<Login />} />
+                <Route element={<PrivateRoutes />}>
+                    <Route path="/dashboard" element={<Dashboard/>} />
+                    <Route exact path="/courses" element={<Courses />} />
+                    <Route path="/courses/:id" element={<Course />} />
+                    <Route element={<UserSettingSidebar />}>
+                        <Route path="/userdetail" element={<UserDetail />} />
+                        <Route path="/coursedetail" element={<MyCourse />} />
+                        <Route path="/ktm" element={<IdCard />} />
+                        <Route path="/language" element={<Language />} /> 
+                    </Route>
                 </Route>
-            </Route>
             </Routes>
         </div>
         </Router>
