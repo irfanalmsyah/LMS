@@ -61,6 +61,8 @@ function Navbarcomponents() {
       <span class="searchicon">
         <Icon icon={search} size={24} />
       </span>
+      
+      <NavLink to={"/userdetail"}>
       <div class="profilephoto">
       {data && <img src={data.avatar} alt='profile-picture' className='profilephoto-picture'></img> }
       </div>
@@ -71,7 +73,7 @@ function Navbarcomponents() {
         <div class="profilenim">G6012119800</div>  */}
         {data && <div class="profilenim">{data.regnum}</div>}
       </div>
-      
+      </NavLink>
     </div>
   );
 }
