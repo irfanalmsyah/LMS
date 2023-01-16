@@ -40,7 +40,9 @@ const UserDetail = () => {
                 <div class="userdetail-title">User Detail</div>
                 <div class="userdetail-box"></div>
                 <div class="userdetail-user">
-                    <div class="userdetail-userprofile"></div>
+                    <div class="userdetail-userprofile">
+                    {data && <img src={data.avatar} alt='profile-picture' className='userdetail-userpicture'></img> }
+                    </div>
                     {data && <div class="userdetail-username">{data.name}</div>}
                     <button class="userdetail-logout" onClick={Logout}>
                         <div class="userdetail-logoutbox"></div>
@@ -55,7 +57,7 @@ const UserDetail = () => {
                 {data && <div class="userdetail-realname">{data.name}</div>}
                 <div class="userdetail-nim">NIM</div>
                 <div class="userdetail-realnimbox"></div>
-                {data && <div class="userdetail-realnimbox">{data.regnum}</div>}
+                {data && <div class="userdetail-realnim">{data.regnum}</div>}
                 <div class="userdetail-email">Email</div>
                 <div class="userdetail-realemailbox"></div>
                 {data && <div class="userdetail-realemail">{data.email}</div>}
@@ -64,10 +66,10 @@ const UserDetail = () => {
                 <div class="userdetail-realphoneicon">
                     <Icon icon={edit3} size={24} />
                 </div>
-                <div class="userdetail-realphone">+6281287654332</div>
+                {data && <div class="userdetail-realphone">{data.phone}</div>}
                 <div class="userdetail-dob">Date of Birth</div>
                 <div class="userdetail-realdobbox"></div>
-                <div class="userdetail-realdob">12 - 04 - 2002</div>
+                {data && <div class="userdetail-realdob">{data.birthdate}</div>}
             </div>
         </div>
     )
