@@ -1,51 +1,39 @@
 import React from "react";
-import "./style.css";
+import "./assets/styles/style.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Logincomponents from "./components/Logincomponents";
-import Usersettingcomponents from "./components/Usersettingcomponents";
-import Userdetailcomponents from "./components/Userdetailcomponents";
-import Coursedetailcomponents from "./components/Coursedetailcomponents";
-import Logintest from "./components/Logintest";
-import Ktmcomponents from "./components/Ktmcomponents";
-import Languagecomponents from "./components/Languagecomponents";
-import Apitest from "./components/Apitest";
+import Login from "./components/Login";
+import UserDetail from "./components/UserDetail";
+import MyCourse from "./components/MyCourse";
+import IdCard from "./components/IdCard";
+import Language from "./components/Language";
 import PrivateRoutes from "./utils/PrivateRoutes";
-import Cookiejwt from "./utils/Cookiejwt";
-import Cookieset from "./utils/Cookieset";
-import Navbarcomponents from "./components/Navbarcomponents";
-import Dashboardcomponents from "./components/Dashboardcomponents";
+import Dashboard from "./components/Dashboard";
+import UserSettingSidebar from "./components/UserSettingSidebar";
+import Courses from "./components/Courses";
+import Course from "./components/Course";
 
 function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route exact path="/" element={<Logincomponents />} />
-          <Route path ="/navbar" element={<Navbarcomponents />} />
-
-
-
-          <Route element={<PrivateRoutes />}>
-          <Route path="/dashboard" element={<Dashboardcomponents/>} />
-          <Route path="/usersetting" element={<Usersettingcomponents />} />
-            <Route path="/userdetail" element={<Userdetailcomponents />} />
-            <Route path="/coursedetail" element={<Coursedetailcomponents />} />
-            <Route path="/ktm" element={<Ktmcomponents />} />
-            <Route path="/language" element={<Languagecomponents />} />
-          </Route>
-
-          <Route path="/logintest" element={<Logintest />} />
-
-          <Route path="/apitest" element={<Apitest />} />
-
-          <Route path="/cookietest" element={<Cookiejwt />} />
-          <Route path="/cookieset" element={<Cookieset />} />
-
-        </Routes>
-      </div>
-    </Router>
-  );
+    return (
+        <Router>
+        <div className="App">
+            <Routes>
+            <Route path="/" element={<Login />} />
+            <Route element={<PrivateRoutes />}>
+                <Route path="/dashboard" element={<Dashboard/>} />
+                <Route exact path="/courses" element={<Courses />} />
+                <Route path="/courses/:id" element={<Course />} />
+                <Route element={<UserSettingSidebar />}>
+                    <Route path="/userdetail" element={<UserDetail />} />
+                    <Route path="/coursedetail" element={<MyCourse />} />
+                    <Route path="/ktm" element={<IdCard />} />
+                    <Route path="/language" element={<Language />} /> 
+                </Route>
+            </Route>
+            </Routes>
+        </div>
+        </Router>
+    );
 }
 
 export default App;

@@ -1,0 +1,507 @@
+.usersetting-page {
+  position: absolute;
+  width: 326px;
+  height: 1080px;
+  left: 0px;
+  top: 0px;
+
+  /* Base 1 */
+
+  background: #fbfcfd;
+  filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.3));
+}
+
+.active {
+    color: #0C145A;
+    font-weight: 500;
+}
+
+.usersetting-title {
+  position: absolute;
+  width: 199px;
+  height: 48px;
+  left: 64px;
+  top: 120px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  /* identical to box height */
+
+  /* Ungu */
+
+  color: #0c145a;
+}
+
+.usersetting-detail {
+  position: absolute;
+  width: 97px;
+  height: 27px;
+  left: 106px;
+  top: 211px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+/*   color: #7e8cac; */
+}
+
+.usersetting-detailicon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 64px;
+  top: 212px;
+}
+
+.usersetting-course {
+  position: absolute;
+  width: 121px;
+  height: 27px;
+  left: 106px;
+  top: 269px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+
+
+}
+
+.usersetting-courseicon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 64px;
+  top: 271px;
+}
+
+.usersetting-ktm {
+  position: absolute;
+  width: 37px;
+  height: 27px;
+  left: 106px;
+  top: 326px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+}
+
+.usersetting-ktmicon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 66px;
+  top: 328px;
+}
+
+.usersetting-language {
+  position: absolute;
+  width: 91px;
+  height: 27px;
+  left: 106px;
+  top: 383px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+}
+
+.usersetting-languageicon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 66px;
+  top: 386px;
+}
+
+
+
+.userdetail-title {
+    position: absolute;
+width: 131px;
+height: 36px;
+left: 366px;
+top: 126px;
+
+/* Poppins H2 Semi Bold */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height */
+
+
+/* Ungu */
+
+color: #0C145A;
+}
+
+.userdetail-box {
+    position: absolute;
+width: 1490px;
+height: 871px;
+left: 366px;
+top: 209px;
+
+/* Base 1 */
+
+background: #FBFCFD;
+border-radius: 24px 24px 0px 0px;
+}
+
+.userdetail-userprofile{
+    position: absolute;
+width: 100px;
+height: 100px;
+left: 416px;
+top: 260px;
+
+background: #FEC4D3;
+}
+
+.userdetail-username{
+    position: absolute;
+width: 179px;
+height: 30px;
+left: 540px;
+top: 267px;
+
+/* Poppins H3 Bold */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+
+color: #0C145A;
+}
+
+.userdetail-logoutbox{
+    position: absolute;
+width: 146px;
+height: 40px;
+left: 540px;
+top: 313px;
+
+background: #FF333F;
+border-radius: 24px;
+}
+
+.userdetail-logouttext{
+    position: absolute;
+width: 69px;
+height: 24px;
+left: 597px;
+top: 321px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+}
+
+.userdetail-logouticon{
+    position: absolute;
+width: 20px;
+height: 20px;
+left: 563px;
+top: 318px;
+
+color: white;
+}
+
+.userdetail-name{
+    position: absolute;
+width: 62px;
+height: 30px;
+left: 416px;
+top: 400px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+
+color: #0C145A;
+
+}
+
+.userdetail-realnamebox{
+    position: absolute;
+width: 400px;
+height: 54px;
+left: 416px;
+top: 438px;
+
+/* Input */
+
+background: #E5E5E5;
+opacity: 0.3;
+border-radius: 8px;
+}
+
+.userdetail-realname{
+    position: absolute;
+width: 141px;
+height: 24px;
+left: 436px;
+top: 453px;
+
+/* Poppins H5 Regular */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: rgba(12, 20, 90, 0.8);
+}
+
+.userdetail-nim{
+    position: absolute;
+width: 38px;
+height: 30px;
+left: 416px;
+top: 516px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+
+color: #0C145A;
+}
+
+.userdetail-realnimbox{
+    position: absolute;
+width: 400px;
+height: 54px;
+left: 416px;
+top: 554px;
+
+background: #E5E5E5;
+opacity: 0.3;
+border-radius: 8px;
+}
+
+.userdetail-realnim{
+    position: absolute;
+    width: 98px;
+    height: 24px;
+    left: 436px;
+    top: 569px;
+    
+    /* Poppins H5 Regular */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+    
+    
+    color: rgba(12, 20, 90, 0.8);
+}
+
+.userdetail-email{
+    position: absolute;
+width: 56px;
+height: 30px;
+left: 896px;
+top: 400px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+
+color: #0C145A;
+}
+
+.userdetail-realemailbox{
+    position: absolute;
+width: 400px;
+height: 54px;
+left: 896px;
+top: 438px;
+
+background: #E5E5E5;
+opacity: 0.3;
+border-radius: 8px;
+}
+
+.userdetail-realemailicon{
+    position: absolute;
+width: 24px;
+height: 24px;
+left: 1256px;
+top: 453px;
+
+}
+
+.userdetail-realemail{
+    position: absolute;
+width: 282px;
+height: 24px;
+left: 916px;
+top: 453px;
+
+/* Poppins H5 Regular */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: rgba(12, 20, 90, 0.8);
+}
+
+.userdetail-phone{
+    position: absolute;
+width: 193px;
+height: 30px;
+left: 896px;
+top: 516px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+
+color: #0C145A;
+}
+
+.userdetail-realphonebox{
+    position: absolute;
+width: 400px;
+height: 54px;
+left: 896px;
+top: 554px;
+
+background: #E5E5E5;
+opacity: 0.3;
+border-radius: 8px;
+}
+
+.userdetail-realphoneicon{
+    position: absolute;
+width: 24px;
+height: 24px;
+left: 1256px;
+top: 569px;
+}
+
+.userdetail-realphone{
+    position: absolute;
+width: 132px;
+height: 24px;
+left: 916px;
+top: 569px;
+
+/* Poppins H5 Regular */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: rgba(12, 20, 90, 0.8);
+}
+
+.userdetail-dob{
+    position: absolute;
+    width: 124px;
+    height: 30px;
+    left: 416px;
+    top: 632px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    
+    
+    color: #0C145A;
+}
+
+.userdetail-realdobbox{
+    position: absolute;
+    width: 400px;
+    height: 54px;
+    left: 416px;
+    top: 670px;
+    
+    background: #E5E5E5;
+    opacity: 0.3;
+    border-radius: 8px;
+}
+
+.userdetail-realdob{
+    position: absolute;
+    width: 132px;
+    height: 24px;
+    left: 436px;
+    top: 685px;
+    
+    /* Poppins H5 Regular */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+    
+    
+    color: rgba(12, 20, 90, 0.8);
+}

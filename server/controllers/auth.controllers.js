@@ -21,8 +21,11 @@ const login = async (req, res) => {
         res.json({ token });
     } catch (error) {
         res.status(400).json({ message: error.message });
+        if (process.env.NODE_ENV !== 'production') {
+            console.error(error);
+        }
     }
-};  
+};
 
 module.exports = {
     login,

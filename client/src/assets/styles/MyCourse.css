@@ -1,0 +1,257 @@
+
+.coursedetail-title {
+    position: absolute;
+width: 164px;
+height: 36px;
+left: 366px;
+top: 126px;
+
+/* Poppins H2 Semi Bold */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height */
+
+
+/* Ungu */
+
+color: #0C145A;
+}
+
+.coursedetail-box {
+    position: absolute;
+width: 1490px;
+height: 871px;
+left: 366px;
+top: 209px;
+
+/* Base 1 */
+
+background: #FBFCFD;
+border-radius: 24px 24px 0px 0px;
+}
+
+.coursedetail-card-icon {
+    position: absolute;
+height: 24px;
+left: 89.66%;
+right: 0%;
+top: calc(50% - 24px/2 - 0.5px);
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+}
+
+.coursedetail-card-title {
+    width: 232px;
+height: 24px;
+
+/* Poppins H5 Regular */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+/* Secondary Text Color */
+
+color: #697586;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+}
+
+.coursedetail-card-subtitle {
+    width: 177px;
+    height: 27px;
+
+/* Poppins H4 Medium */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+
+
+/* Primary Text Color */
+
+color: #121926;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.coursedetail-card1 {
+/* Card 1 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+gap: 10px;
+
+position: absolute;
+width: 280px;
+height: 103px;
+left: 416px;
+top: 260px;
+
+background: #FFFFFF;
+/* Line Color */
+
+border: 1px solid #E3E8EF;
+border-radius: 6px;
+}
+
+.coursedetail-card2 {
+    /* Card 2 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+gap: 10px;
+
+position: absolute;
+width: 280px;
+height: 103px;
+left: 736px;
+top: 260px;
+
+background: #FFFFFF;
+/* Line Color */
+
+border: 1px solid #E3E8EF;
+border-radius: 6px;
+}
+
+.coursedetail-card3 {
+    /* Card 3 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+gap: 10px;
+
+position: absolute;
+width: 280px;
+height: 103px;
+left: 1056px;
+top: 260px;
+
+background: #FFFFFF;
+/* Line Color */
+
+border: 1px solid #E3E8EF;
+border-radius: 6px;
+}
+
+.coursedetail-card4{
+    /* Card 4 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+gap: 10px;
+
+position: absolute;
+width: 280px;
+height: 103px;
+left: 416px;
+top: 403px;
+
+background: #FFFFFF;
+/* Line Color */
+
+border: 1px solid #E3E8EF;
+border-radius: 6px;
+}
+
+.coursedetail-card5{
+    /* Card 5 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+gap: 10px;
+
+position: absolute;
+width: 280px;
+height: 103px;
+left: 736px;
+top: 403px;
+
+background: #FFFFFF;
+/* Line Color */
+
+border: 1px solid #E3E8EF;
+border-radius: 6px;
+}
+
+.coursedetail-card6 {
+    /* Card 6 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+gap: 10px;
+
+position: absolute;
+width: 280px;
+height: 103px;
+left: 1056px;
+top: 403px;
+
+background: #FFFFFF;
+/* Line Color */
+
+border: 1px solid #E3E8EF;
+border-radius: 6px;
+}
+

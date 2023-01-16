@@ -1,0 +1,111 @@
+.language-title {
+  /* Language */
+
+  position: absolute;
+  width: 123px;
+  height: 36px;
+  left: 366px;
+  top: 126px;
+
+  /* Poppins H2 Semi Bold */
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+
+  /* Ungu */
+
+  color: #0c145a;
+}
+
+.language-box {
+  position: absolute;
+  width: 1490px;
+  height: 871px;
+  left: 366px;
+  top: 209px;
+
+  /* Base 1 */
+
+  background: #fbfcfd;
+  border-radius: 24px 24px 0px 0px;
+}
+
+.language-button {
+  /* Trigger Button */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 8px;
+  gap: 222px;
+
+  position: absolute;
+  width: 362px;
+  height: 54px;
+  left: 416px;
+  top: 260px;
+
+  /* Primary */
+
+  background: #4640de;
+  border-radius: 8px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height, or 122% */
+
+  /* Layout/100 */
+
+  color: #fcfcfc;
+}
+
+.language-option {
+  position: relative;
+  display: inline-block;
+}
+
+.language-button-content {
+  display: none;
+  position: absolute;
+  min-width: 362px;
+  background: #FBFCFD;
+box-shadow: 0px 0px 8px rgba(34, 34, 34, 0.1);
+border-radius: 16px;
+  z-index: 1;
+  left: 416px;
+  top: 314px;
+}
+
+.language-button-content a {
+    color: #0C145A;
+  padding: 10px 54px 10px 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  display: block;
+  text-decoration: none;
+}
+
+.language-button-content a:hover {
+  background-color: #c9c7fa;
+}
+
+.language-option:hover .language-button-content {
+  display: block;
+}
+
+.language-option:hover .language-button {
+  background-color: #4640de;
+}

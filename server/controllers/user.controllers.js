@@ -7,6 +7,9 @@ const getAllUsers = async (req, res) => {
 		res.json({ users: users });
   	} catch (error) {
 		res.status(400).json({ message: error.message });
+        if (process.env.NODE_ENV !== 'production') {
+            console.error(error);
+        }
 	}
 };
 
@@ -32,6 +35,9 @@ const createUser = async (req, res) => {
 		res.json(newUser);
 	} catch (error) {
 		res.status(400).json({ message: error.message });
+        if (process.env.NODE_ENV !== 'production') {
+            console.error(error);
+        }
 	}
 };
 
@@ -45,6 +51,9 @@ const getUser = async (req, res) => {
         res.json(user);
 	} catch (error) {
 		res.status(401).json({ message: error.message });
+        if (process.env.NODE_ENV !== 'production') {
+            console.error(error);
+        }
 	}
 };
 
@@ -60,6 +69,9 @@ const deleteUser = async (req, res) => {
         res.json({ message: 'User deleted' });
     } catch (error) {
         res.status(401).json({ message: error.message });
+        if (process.env.NODE_ENV !== 'production') {
+            console.error(error);
+        }
     }
 };
 
@@ -77,6 +89,9 @@ const updateUser = async (req, res) => {
         res.json(updatedUser);
     } catch (error) {
         res.status(401).json({ message: error.message });
+        if (process.env.NODE_ENV !== 'production') {
+            console.error(error);
+        }
     }
 };
 
@@ -85,6 +100,9 @@ const getMe = async (req, res) => {
         res.json(req.user);
     } catch (error) {
         res.status(401).json({ message: error.message });
+        if (process.env.NODE_ENV !== 'production') {
+            console.error(error);
+        }
     }
 };
 
@@ -97,6 +115,9 @@ const updateMe = async (req, res) => {
         res.json(updatedUser);
     } catch (error) {
         res.status(401).json({ message: error.message });
+        if (process.env.NODE_ENV !== 'production') {
+            console.error(error);
+        }
     }
 };
 
